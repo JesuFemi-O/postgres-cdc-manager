@@ -211,9 +211,5 @@ This project was built to **solve a real-world problem**—managing **CDC replic
 ---
 
 ### **📢 Some Cool Next Steps**
-- **[] Add CI/CD integration for automatic Terraform validation**
-- **[] Explore Debezium integration for streaming CDC events**
-
-### **📢 Some Cool Next Steps**
 - [ ] **Add CI/CD integration for automatic Terraform validation**
 - [ ] **Explore Debezium integration for streaming CDC events**
