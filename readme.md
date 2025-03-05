@@ -10,6 +10,7 @@ The **Makefile** simplifies execution by abstracting complex commands into easy-
 ## 📂 Project Structure
 This project is organized as follows:
 
+```
 .
 ├── Makefile             # Main Makefile for managing CLI, Terraform, and Docker
 ├── custom-cli/          # Custom Python CLI for CDC management
@@ -31,7 +32,7 @@ This project is organized as follows:
 │   └── variables.tf     # Terraform variable definitions
 ├── requirements.txt      # Python dependencies
 └── readme.md             # Project documentation
-
+```
 
 ---
 
