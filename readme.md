@@ -208,8 +208,6 @@ This project was built to **solve a real-world problem**—managing **CDC replic
 - **Schema-level publications are a Python advantage.** Terraform doesn’t natively support `FOR TABLES IN SCHEMA` yet.
 - **Makefiles simplify workflows.** Running `make setup` abstracts complex setup steps into one command.
 
-🔗 **Full Source Code:** [GitHub Repo](https://github.com/your-org/pg-cdc-manager)
-
 ---
 
 ### **📢 Some Cool Next Steps**
