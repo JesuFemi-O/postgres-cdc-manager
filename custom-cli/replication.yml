@@ -1,0 +1,49 @@
+CONNECTION_PROFILES:
+  - name: prod_pg_db
+    type: AWS_SECRETS # can be AWS_SECRETS or ENV_SECRETS
+    credential_id: cdc/msk/db-connection
+  
+  - name: dev_pg_db
+    type: ENV_SECRETS
+    credential_id: PG_URL
+
+
+REPLICATION_PROFILES:
+  - replication_profile_name: prod_to_dev
+    connection_profile: dev_pg_db
+    publication_name: cdc_dev_pub
+    slot_name: cdc_dev_slot
+    publication_ops:
+      - INSERT
+      - UPDATE
+      - DELETE
+    publication_type: filtered # can be all, schema or filtered
+    publication_tables: 
+      - bookies.bets
+      - bookies.transactions
+      - sims.sessions
+  
+  - replication_profile_name: prod_to_dev_v2
+    connection_profile: dev_pg_db
+    publication_name: cdc_dev_pub_2
+    slot_name: cdc_dev_slot_2
+    publication_ops:
+      - UPDATE
+      - DELETE
+    publication_type: filtered # can be all, schema or filtered
+    publication_tables: 
+      - bookies.users
+      - sims.players
+      - sims.games
+    publication_schema: pg_develop
+  
+  - replication_profile_name: prod_to_dev_v3
+    connection_profile: dev_pg_db
+    publication_name: cdc_dev_pub_3
+    slot_name: cdc_dev_slot_3
+    publication_ops:
+      - INSERT
+      - UPDATE
+      - DELETE
+    publication_type: schema # can be all, schema or filtered
+    publication_schema: nasa

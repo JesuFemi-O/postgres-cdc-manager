@@ -1,0 +1,21 @@
+# Ignore Terraform state files (contain sensitive info)
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Ignore personal Terraform settings
+# terraform.tfvars # please uncomment and ignore this file in production!
+terraform.tfvars.json
+
+# Ignore sensitive `.env` files if used
+.env
+.env.local
+
+# Ignore PostgreSQL history
+.psql_history
+
+# Ignore Python stuff
+*.pyc
+venv/
+__pycache__/
